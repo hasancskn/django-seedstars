@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>List User</title>
+
+    <!-- Bootstrap core CSS -->
+	{% load static %}
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+	<div class="table-responsive">
+				<table class="table table-striped">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>Name</th>
+					  <th>Email</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					{% for o in data %}
+						<tr>
+						  <td>{{ o.id }}</td>
+						  <td>{{ o.name }}</td>
+						  <td>{{ o.email }}</td>
+						</tr>
+					{% endfor %}
+				  </tbody>
+				</table>
+			  </div>
+		  </div> <!-- /container -->
+  </body>
+</html>
